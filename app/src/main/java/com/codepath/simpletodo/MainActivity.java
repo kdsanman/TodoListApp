@@ -55,6 +55,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void onClearList(View v) {
+        items.clear();
+        itemsAdapter.clear();
+
+        writeItems();
+
+        Toast.makeText(getApplicationContext(), "Items cleared", Toast.LENGTH_SHORT).show();
+    }
+
     public void onAddItem(View v) {
         //need to resolve the edit text. this is a reference to etNewItem
         EditText etNewItem = findViewById(R.id.etNewItem);

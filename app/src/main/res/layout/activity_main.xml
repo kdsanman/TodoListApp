@@ -13,17 +13,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="48dp"
         android:onClick="onAddItem"
         android:text="Add" />
 
     <ListView
         android:id="@+id/lvItems"
         android:layout_width="match_parent"
-        android:layout_height="464dp"
+        android:layout_height="417dp"
+        android:layout_above="@+id/etNewItem"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="47dp" />
+        android:layout_marginBottom="0dp" />
 
     <EditText
         android:id="@+id/etNewItem"
@@ -39,5 +41,20 @@
         android:ems="10"
         android:hint="Add a new item"
         android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnClearItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="141dp"
+        android:layout_marginLeft="141dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="1dp"
+        android:onClick="onClearList"
+        android:text="Clear List" />
 
 </RelativeLayout>
