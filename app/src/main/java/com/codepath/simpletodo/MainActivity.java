@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         readItems(); //replaces line below
         //items = new ArrayList<>();
         itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         //items.add("Second item");
 
         setupListViewListener();
+
 
     }
 
@@ -98,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 items.remove(position);
 
                 //Alert user that item has been added to list
-                Toast.makeText(getApplicationContext(), "Item removed from: " + position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Item removed", Toast.LENGTH_SHORT).show();
 
                 //need the adapter to know the item was deleted
                 itemsAdapter.notifyDataSetChanged();
